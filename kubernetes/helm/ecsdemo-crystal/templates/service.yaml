@@ -4,6 +4,8 @@ metadata:
   name: {{ include "ecsdemo-crystal.fullname" . }}
   labels:
     {{- include "ecsdemo-crystal.labels" . | nindent 4 }}
+  annotations:
+    service.kubernetes.io/topology-aware-hints
 spec:
   type: {{ .Values.service.type }}
   ports:

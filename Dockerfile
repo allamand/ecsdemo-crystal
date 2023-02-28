@@ -8,7 +8,7 @@ FROM public.ecr.aws/ubuntu/ubuntu:18.04
 RUN apt-get update &&\
     apt install -y curl jq bash python3 python3-pip &&\
     pip3 install awscli netaddr
-COPY --from=0 /src/startup.sh /startup.sh
+COPY --from=0 /src/startup-cdk.sh /startup-cdk.sh
 COPY --from=0 /src/server /server
 COPY --from=0 /src/code_hash.txt /code_hash.txt
 HEALTHCHECK --interval=10s --timeout=3s \
