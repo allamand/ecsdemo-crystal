@@ -14,4 +14,4 @@ COPY --from=0 /src/code_hash.txt /code_hash.txt
 HEALTHCHECK --interval=10s --timeout=3s \
   CMD curl -f -s http://localhost:3000/health || exit 1
 EXPOSE 3000
-ENTRYPOINT ["bash", "/startup.sh"]
+ENTRYPOINT ["bash", "/startup-cdk.sh"]
