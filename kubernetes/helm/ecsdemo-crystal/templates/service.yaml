@@ -5,7 +5,7 @@ metadata:
   labels:
     {{- include "ecsdemo-crystal.labels" . | nindent 4 }}
   annotations:
-    {{ if Values.topologySpreadConstraints }}
+    {{ if .Values.topologySpreadConstraints }}
     service.kubernetes.io/topology-aware-hints: auto
     {{ end }}
 spec:
