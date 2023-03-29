@@ -82,5 +82,5 @@ tolerations: []
 
 affinity: {}
 
-topologyAwareHints: false
+topologyAwareHints: "false"
 topologySpreadConstraints: []
